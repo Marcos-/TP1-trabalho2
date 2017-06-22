@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NovaReserva</class>
+ <widget class="QDialog" name="NovaReserva">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>629</width>
+    <height>382</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Nova Reserva</string>
+  </property>
+  <widget class="QDialogButtonBox" name="ok_cancela_botao">
+   <property name="geometry">
+    <rect>
+     <x>264</x>
+     <y>336</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="erro_label">
+   <property name="geometry">
+    <rect>
+     <x>384</x>
+     <y>248</y>
+     <width>225</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>32</y>
+     <width>345</width>
+     <height>233</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="dadosLayout">
+    <item>
+     <layout class="QHBoxLayout" name="propostaLayout">
+      <item>
+       <widget class="QLabel" name="proposta_label">
+        <property name="text">
+         <string>Proposta : </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="proposta_field"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="aulalLayout">
+      <item>
+       <widget class="QLabel" name="aula_label">
+        <property name="text">
+         <string>Aula : </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="aula_field"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="recorrenteLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="recorrente_label">
+        <property name="text">
+         <string>Evento Recorrente : </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="recorrente_field">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="salasLayout">
+      <item>
+       <widget class="QLabel" name="salas_label">
+        <property name="text">
+         <string>Salas : </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="salas_field"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="matriculasLayout">
+      <item>
+       <widget class="QLabel" name="matriculas_label">
+        <property name="text">
+         <string>Matrículas : </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="matriculas_field"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>424</x>
+     <y>40</y>
+     <width>185</width>
+     <height>137</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="datasLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horarioLayout">
+      <item>
+       <widget class="QLabel" name="horario_label">
+        <property name="text">
+         <string>Horário : </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTimeEdit" name="horario_field"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="dataInicioLayout">
+      <item>
+       <widget class="QLabel" name="dataInicio_label">
+        <property name="text">
+         <string>Data : </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDateEdit" name="dataInicio_field"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="dataFimLayout">
+      <item>
+       <widget class="QLabel" name="dataFim_label">
+        <property name="text">
+         <string>Data Fim : </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDateEdit" name="dataFim_field"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>ok_cancela_botao</zorder>
+  <zorder>erro_label</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ok_cancela_botao</sender>
+   <signal>rejected()</signal>
+   <receiver>NovaReserva</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,203 @@
+\subsection*{Trabalho 2 de Técnicas de programação}
+
+\subsection*{Índice}
+
+
+\begin{DoxyItemize}
+\item 1 \href{#1-objetivo}{\tt Objetivo}~\newline
+ $<$t$>$1.\+1 \href{#11-descrição}{\tt Descrição}~\newline
+
+\item 2 \href{#2-requisitos}{\tt Requisitos}~\newline
+ $<$t$>$2.\+1 \href{#21-utilizado}{\tt Utilizado}~\newline
+ $<$t$>$2.\+2 \href{#22-instalações}{\tt Instalações}~\newline
+
+\item 3 \href{#3-build-compilation}{\tt Build Compilation}~\newline
+
+\item 4 \href{#4-diagramas}{\tt Diagramas}~\newline
+ $<$t$>$ 4.\+1 \href{#41-diagrama-de-sequência}{\tt Diagrama de sequência}
+\item 5 \href{#5-doxygen}{\tt Doxygen}
+\item 6 \href{#6-visão-computacional}{\tt Visão Computacional}
+\end{DoxyItemize}
+
+\subsubsection*{1 Objetivo}
+
+Aprender e trabalhar com a linguagem C++, implementando e aplicando conceitos ensinados em sala, incluindo detecção facial, banco de dados e manipulação do Git\+Hub. 
+
+\subsubsection*{1.\+1 Descrição}
+
+\paragraph*{Sistema de controle de acesso}
+
+Simular um sistema para ser utilizado no Laboratório de Informática (L\+I\+NF) da Universidade de Brasília que faz o controle de acesso, modelando por cadastramento, tipo de usuário, detecção facial e reservas. 
+
+~\newline
+
+
+\subsubsection*{2 Requisitos}
+
+
+\begin{DoxyItemize}
+\item Compilador g++
+\item Editor de texto
+\item Biblioteca de processamento de imagens
+\item Ferramenta de versionamento
+\item Framework para criação de interface gráfica
+\item Banco de dados
+\end{DoxyItemize}
+
+\paragraph*{2.\+1 Utilizado}
+
+
+\begin{DoxyItemize}
+\item Terminal linux
+\item Compilador g++ Ubuntu 6.\+2.\+0-\/5ubuntu12 20161005
+\item Atom
+\item Git\+Hub
+\item Open\+CV
+\item Qt Creator 5.\+9
+\item S\+Q\+Lite
+\end{DoxyItemize}
+
+\paragraph*{2.\+2 Instalações}
+
+\subparagraph*{Compilador g++}
+
+
+\begin{DoxyCode}
+1 $ sudo apt-get install g++
+\end{DoxyCode}
+
+
+\subparagraph*{Atom}
+
+
+\begin{DoxyCode}
+1 https://atom.io/
+\end{DoxyCode}
+
+
+\subparagraph*{Git\+Hub}
+
+
+\begin{DoxyCode}
+1 $ sudo apt-get install git
+\end{DoxyCode}
+ \#\#\#\#\# Open\+CV 
+\begin{DoxyCode}
+1   Tutorial criado por: Flavio Amaral e Silva; Lukas Lorenz de Andrade; Marcella Pantarotto.
+2 
+3   Para baixar a OPENCV-3.2.0 com a Contrib (extensão) use os seguintes comandos no terminal:
+4   - Para baixar
+5 
+6     wget https://codeload.github.com/opencv/opencv\_contrib/tar.gz/3.2.0
+7     wget https://codeload.github.com/opencv/opencv/tar.gz/3.2.0
+8 
+9   - Para mover para o diretório home
+10 
+11     mv Downloads/opencv\_contrib-3.2.0.tar.gz ./
+12     mv Downloads/opencv-3.2.0.tar.gz ./
+13 
+14   - Para extrair as pastas
+15 
+16     tar xvfz opencv-3.2.0.tar.gz
+17     tar xvfz opencv\_contrib
+18 
+19   - Agora, abra o repositório opencv-3.2.0 e edite o arquivo CMakeLists.txt da seguinte forma:
+20 
+21   Delete:
+22 
+23   404       if(NOT DEFINED OPENCV\_CONFIG\_INSTALL\_PATH)      
+24   405         math(EXPR SIZEOF\_VOID\_P\_BITS "8 * $\{CMAKE\_SIZEOF\_VOID\_P\}")
+25   406         if(LIB\_SUFFIX AND NOT SIZEOF\_VOID\_P\_BITS EQUAL LIB\_SUFFIX)
+26   407           ocv\_update(OPENCV\_CONFIG\_INSTALL\_PATH lib$\{LIB\_SUFFIX\}/cmake/opencv)
+27   408         else()
+28   409           ocv\_update(OPENCV\_CONFIG\_INSTALL\_PATH share/OpenCV)
+29   410         endif()
+30   411       endif()
+31 
+32   E substituia por:
+33 
+34   403       ocv\_update(OPENCV\_CONFIG\_INSTALL\_PATH lib$\{LIB\_SUFFIX\}/cmake/opencv)
+35 
+36   OBS: Os números são apenas indicativos das linhas em que é necessária a operação.
+37   Salve o arquivo e feche o txt.
+38 
+39   - Abra o repositório opencv\_contrib-3.2.0/modules/optflow/samples/ e edite o arquivo motempl.py da
+       seguinte forma:
+40   Substituia a linha 40:
+41 
+42   39        if ret == False:
+43   40            break
+44   41        h, w = frame.shape[:2]
+45   42        prev\_frame = frame.copy()
+46 
+47   Por:
+48   40            print("could not read from video source")
+49   41            sys.exit(1)
+50 
+51   Salve o arquivo txt e feche-o.
+52 
+53   Execute os seguintes comandos:
+54 
+55     cd opencv-3.2.0
+56     mkdir build
+57     cd build
+58 
+59     cmake -D CMAKE\_BUILD\_TYPE=Release -D CMAKE\_INSTALL\_PREFIX=/usr/local -D
+       OPENCV\_EXTRA\_MODULES\_PATH=../../opencv\_contrib-3.2.0/modules ..
+60 
+61     make -j4
+62 
+63     sudo make install
+64 
+65     sudo ldconfig
+66 
+67 Pronta para uso!! ( ͡° ͜ʖ ͡°)
+\end{DoxyCode}
+ \paragraph*{Qt Creator}
+
+\href{https://wiki.qt.io/Install_Qt_5_on_Ubuntu}{\tt Passo-\/a-\/passo}
+
+\paragraph*{S\+Q\+Lite}
+
+
+\begin{DoxyCode}
+1 $ sudo apt-get install sqlite3 libsqlite3-dev
+\end{DoxyCode}
+
+
+\subsubsection*{3 Build Compilation}
+
+Entrar na pasta Projeto\+T\+P1 e usar o seguinte código 
+\begin{DoxyCode}
+1 $ cd ProjetoTP1
+2 $ make ProjetoTP1.pro -spec linux-g++
+3 $ make all
+4 $ make clean
+5 $ chomd 775 ProjetoTP1\_EXEC
+6 ./ProjetoTP1\_EXEC
+\end{DoxyCode}
+
+
+\subsubsection*{4 Diagramas}
+
+\paragraph*{4.\+1 Diagrama de Sequência}
+
+
+
+\subsubsection*{5 Doxygen}
+
+\mbox{[}Documentação Doxygen\mbox{]}
+
+\subsubsection*{6 Visão Computacional}
+
+Uso da biblioteca O\+P\+E\+N\+CV 3.\+2 e do módulo de reconhecimento facial parar a implementação do sistema de login via detecção facial
+\begin{DoxyItemize}
+\item Uso do Cascade lbpcascade\+\_\+frontalface.\+xml, para a deteção facil.
+\item Model para trainamento e reconhecimento usando o algoritmo L\+B\+PH de reconhecimento \+:
+\begin{DoxyItemize}
+\item radius = 3, neighbors = 12, grid\+\_\+x = 12, grid\+\_\+y = 12, threshold = 320.\+0
+\item treinamento do model com 10 fotos.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsubsection*{7 Interface gráfica}
