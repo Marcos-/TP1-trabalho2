@@ -65,61 +65,60 @@ https://atom.io/
 $ sudo apt-get install git
 ```
 ##### OpenCV
-<p>
 ```
-Tutorial criado por: Flavio Amaral e Silva; Lukas Lorenz de Andrade; Marcella Pantarotto.
+  Tutorial criado por: Flavio Amaral e Silva; Lukas Lorenz de Andrade; Marcella Pantarotto.
 
-Para baixar a OPENCV-3.2.0 com a Contrib (extensão) use os seguintes comandos no terminal:
-- Para baixar
+  Para baixar a OPENCV-3.2.0 com a Contrib (extensão) use os seguintes comandos no terminal:
+  - Para baixar
 
-	wget https://codeload.github.com/opencv/opencv_contrib/tar.gz/3.2.0
-	wget https://codeload.github.com/opencv/opencv/tar.gz/3.2.0
+  	wget https://codeload.github.com/opencv/opencv_contrib/tar.gz/3.2.0
+  	wget https://codeload.github.com/opencv/opencv/tar.gz/3.2.0
 
-- Para mover para o diretório home
+  - Para mover para o diretório home
 
-	mv Downloads/opencv_contrib-3.2.0.tar.gz ./
-	mv Downloads/opencv-3.2.0.tar.gz ./
+  	mv Downloads/opencv_contrib-3.2.0.tar.gz ./
+  	mv Downloads/opencv-3.2.0.tar.gz ./
 
-- Para extrair as pastas
+  - Para extrair as pastas
 
-	tar xvfz opencv-3.2.0.tar.gz
-	tar xvfz opencv_contrib
+  	tar xvfz opencv-3.2.0.tar.gz
+  	tar xvfz opencv_contrib
 
-- Agora, abra o repositório opencv-3.2.0 e edite o arquivo CMakeLists.txt da seguinte forma:
+  - Agora, abra o repositório opencv-3.2.0 e edite o arquivo CMakeLists.txt da seguinte forma:
 
-Delete:
+  Delete:
 
-404	    if(NOT DEFINED OPENCV_CONFIG_INSTALL_PATH)		
-405	      math(EXPR SIZEOF_VOID_P_BITS "8 * ${CMAKE_SIZEOF_VOID_P}")
-406	      if(LIB_SUFFIX AND NOT SIZEOF_VOID_P_BITS EQUAL LIB_SUFFIX)
-407	        ocv_update(OPENCV_CONFIG_INSTALL_PATH lib${LIB_SUFFIX}/cmake/opencv)
-408	      else()
-409	        ocv_update(OPENCV_CONFIG_INSTALL_PATH share/OpenCV)
-410	      endif()
-411	    endif()
+  404	    if(NOT DEFINED OPENCV_CONFIG_INSTALL_PATH)		
+  405	      math(EXPR SIZEOF_VOID_P_BITS "8 * ${CMAKE_SIZEOF_VOID_P}")
+  406	      if(LIB_SUFFIX AND NOT SIZEOF_VOID_P_BITS EQUAL LIB_SUFFIX)
+  407	        ocv_update(OPENCV_CONFIG_INSTALL_PATH lib${LIB_SUFFIX}/cmake/opencv)
+  408	      else()
+  409	        ocv_update(OPENCV_CONFIG_INSTALL_PATH share/OpenCV)
+  410	      endif()
+  411	    endif()
 
-E substituia por:
+  E substituia por:
 
-403	    ocv_update(OPENCV_CONFIG_INSTALL_PATH lib${LIB_SUFFIX}/cmake/opencv)
+  403	    ocv_update(OPENCV_CONFIG_INSTALL_PATH lib${LIB_SUFFIX}/cmake/opencv)
 
-OBS: Os números são apenas indicativos das linhas em que é necessária a operação.
-Salve o arquivo e feche o txt.
+  OBS: Os números são apenas indicativos das linhas em que é necessária a operação.
+  Salve o arquivo e feche o txt.
 
-- Abra o repositório opencv_contrib-3.2.0/modules/optflow/samples/ e edite o arquivo motempl.py da seguinte forma:
-Substituia a linha 40:
+  - Abra o repositório opencv_contrib-3.2.0/modules/optflow/samples/ e edite o arquivo motempl.py da seguinte forma:
+  Substituia a linha 40:
 
-39	    if ret == False:
-40	        break
-41	    h, w = frame.shape[:2]
-42	    prev_frame = frame.copy()
+  39	    if ret == False:
+  40	        break
+  41	    h, w = frame.shape[:2]
+  42	    prev_frame = frame.copy()
 
-Por:
-40	        print("could not read from video source")
-41	        sys.exit(1)
+  Por:
+  40	        print("could not read from video source")
+  41	        sys.exit(1)
 
-Salve o arquivo txt e feche-o.
+  Salve o arquivo txt e feche-o.
 
-Execute os seguintes comandos:
+  Execute os seguintes comandos:
 
 	cd opencv-3.2.0
 	mkdir build
