@@ -12,6 +12,7 @@
    * 3 [Build Compilation](#3-build-compilation)<br />
    * 4 [Diagramas](#4-diagramas)<br />
    <t> 4.1 [Diagrama de sequência](#41-diagrama-de-sequência)
+   <t> 4.2 [Diagrama de classe](#41-diagrama-de-sequência)
    * 5 [Doxygen](#5-doxygen)
    * 6 [Visão Computacional](#6-visão-computacional)
 
@@ -160,11 +161,12 @@ $ chomd 775 ProjetoTP1_EXEC
 #### 4.1 Diagrama de Sequência
 ![Diagrama de sequência](https://github.com/Marcos-/TP1-trabalho2/blob/master/assets/%C3%ADndice.png)
 
-
+#### 4.2 Diagrama de Classe
+Doxygen não esta gerando
 
 ### 5 Doxygen
 
-[Documentação Doxygen] Pasta HTML e Latex
+Pasta HTML e Latex
 
 
 ### 6 Visão Computacional
@@ -174,5 +176,3 @@ Uso da biblioteca OPENCV 3.2 e do módulo de reconhecimento facial parar a imple
 - Model para trainamento e reconhecimento usando o algoritmo LBPH de reconhecimento :
   - radius = 3, neighbors = 12, grid_x = 12, grid_y = 12, threshold = 320.0
   - treinamento do model com 10 fotos.
-
-### 7 Prints

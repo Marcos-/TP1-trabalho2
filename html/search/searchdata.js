@@ -1,21 +1,36 @@
 var indexSectionsWithContent =
 {
-  0: "jlnpr",
+  0: "defgjlmnoprsu~",
   1: "jlnpr",
-  2: "r"
+  2: "u",
+  3: "jlmnpr",
+  4: "degjlmnoprsu~",
+  5: "fnpsu",
+  6: "lp",
+  7: "r"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "pages"
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "variables",
+  6: "defines",
+  7: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Pages"
+  2: "Namespaces",
+  3: "Files",
+  4: "Functions",
+  5: "Variables",
+  6: "Macros",
+  7: "Pages"
 };
 
