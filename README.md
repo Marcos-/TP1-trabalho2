@@ -164,7 +164,7 @@ $ chomd 775 ProjetoTP1_EXEC
 
 ### 5 Doxygen
 
-[Documentação Doxygen]
+[Documentação Doxygen] Pasta HTML e Latex
 
 
 ### 6 Visão Computacional
@@ -175,4 +175,4 @@ Uso da biblioteca OPENCV 3.2 e do módulo de reconhecimento facial parar a imple
   - radius = 3, neighbors = 12, grid_x = 12, grid_y = 12, threshold = 320.0
   - treinamento do model com 10 fotos.
 
-### 7 Interface gráfica
+### 7 Prints
