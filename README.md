@@ -158,7 +158,7 @@ $ chomd 775 ProjetoTP1_EXEC
 ### 4 Diagramas
 
 #### 4.1 Diagrama de Sequência
-![Diagrama de sequência](https://github.com/Marcos-/TP1-trabalho2/assets/indice.png)
+![Diagrama de sequência](https://github.com/Marcos-/TP1-trabalho2/blob/master/assets/%C3%ADndice.png)
 
 
 
